@@ -11,6 +11,14 @@ import {
 } from "@/components/ui/select"
 import { Card } from "@/components/ui/card";
 import { PageSelector } from "@/components/PageSelector";
+import CardImage1 from '../public/assets/card-1-img.png'
+import CardImage2 from '../public/assets/sneaker3.png'
+import CardImage3 from '../public/assets/sneaker2.png'
+import CardImage4 from '../public/assets/sneaker1.png'
+import CardImage5 from '../public/assets/tshirt2.png'
+import CardImage6 from '../public/assets/cart-hoodie1.png'
+import CardImage7 from '../public/assets/cart-tshirt3.png'
+import CardImage8 from '../public/assets/tshirt1.png'
 
 export default function Home() {
   return (
@@ -39,7 +47,6 @@ export default function Home() {
                     </SelectTrigger>
                     <SelectContent align="end">
                       <SelectGroup className="py-2">
-                        {/* <SelectLabel>Fruits</SelectLabel> */}
                         <SelectItem value="createdAtDesc" className="py-1">Novidades</SelectItem>
                         <SelectItem value="priceDesc" className="py-1">Preço: Maior - menor</SelectItem>
                         <SelectItem value="priceAsc" className="py-1">Preço: Menor - maior</SelectItem>
@@ -54,15 +61,15 @@ export default function Home() {
 
 
               <TabsContent value="all" className="w-full">
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                  <Card></Card>
-                  <Card></Card>
-                  <Card></Card>
-                  <Card></Card>
-                  <Card></Card>
-                  <Card></Card>
-                  <Card></Card>
-                  <Card></Card>
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+                  <Card title="Nike Court Vision" img1={CardImage1} img2={CardImage2} price={12000}></Card>
+                  <Card title="Nike Court Vision" img1={CardImage2} img2={CardImage2} price={9000}></Card>
+                  <Card title="Nike Court Vision" img1={CardImage3} img2={CardImage2} price={10000}></Card>
+                  <Card title="Nike Court Vision" img1={CardImage4} img2={CardImage2} price={17100}></Card>
+                  <Card title="Nike Court Vision" img1={CardImage5} img2={CardImage2} price={2000}></Card>
+                  <Card title="Nike Court Vision" img1={CardImage6} img2={CardImage2} price={3000}></Card>
+                  <Card title="Nike Court Vision" img1={CardImage7} img2={CardImage2} price={1700}></Card>
+                  <Card title="Nike Court Vision" img1={CardImage8} img2={CardImage2} price={950}></Card>
                 </div>
                 <div className="w-full flex justify-end pt-14 pb-20">
                   <div className="selector"><PageSelector /></div>
