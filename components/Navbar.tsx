@@ -7,7 +7,7 @@ import Image from 'next/image'
 
 export default function NavBar() {
   return (
-    <nav className="flex justify-center h-16 bg-white sticky top-0 left-0 border-b border-slate-200 px-6">
+    <nav className="flex justify-center h-16 bg-white sticky top-0 left-0 border-b border-slate-200 px-6 z-50">
         <div className="max-w-5xl w-full flex justify-between items-center">
             <Link href="/"><Image src={Logo} width={50} height={50} alt='Logo'></Image></Link>
             <div className='flex items-start gap-3 md:gap-5'>

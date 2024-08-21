@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -59,6 +61,10 @@
   }
 }
 
+* {
+  font-family: "Saira", sans-serif;
+}
+
 @layer base {
   * {
     @apply border-border;
@@ -80,4 +86,76 @@ button.tab-button[data-state="active"] {
   font-weight: 700 !important;
   background-color: transparent !important;
   border-color: black !important;
+}
+
+/* slider CSS */
+.thumbnails {
+  display: flex;
+  flex-direction: column;
+  line-height: 0;
+}
+.thumbnails li {
+  flex: auto;
+}
+.thumbnails a {
+  display: block;
+}
+.thumbnails img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+}
+
+.slides {
+  overflow: hidden;
+}
+.slides li {
+  /* width: 75vmin; */
+  /* height: 100vmin; */
+  position: absolute;
+  z-index: 1;
+  border-radius: 8px;
+}
+.slides img {
+  /* height: 100vmin; */
+  object-fit: cover;
+  /* object-position: top; */
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.slides li:target {
+  height: 100%;
+  z-index: 3;
+  -webkit-animation: slide 1s 1;
+}
+
+.slides li:not(:target) {
+  -webkit-animation: hidden 1s 1;
+}
+
+/* featured-image */
+.featured-image img {
+  /* width: 100%; */
+}
+
+/* Slide Animations/Transitions */
+@keyframes slide {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes hidden {
+  0% {
+    z-index: 2;
+  }
+  100% {
+    z-index: 2;
+  }
 }
