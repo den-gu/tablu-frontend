@@ -70,8 +70,9 @@
 
 /* tab-button CSS */
 button.tab-button {
-  border-bottom: 3px solid transparent !important;
-  text-transform: uppercase;
+  font-size: 13px !important;
+  font-weight: 400 !important;
+  border-bottom: 4px solid transparent !important;
   border-radius: 0 !important;
   box-shadow: none !important;
 }
