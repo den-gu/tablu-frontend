@@ -67,3 +67,16 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* tab-button CSS */
+button.tab-button {
+  border-bottom: 3px solid transparent !important;
+  text-transform: uppercase;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+button.tab-button[data-state="active"] {
+  font-weight: 700 !important;
+  background-color: transparent !important;
+  border-color: black !important;
+}
